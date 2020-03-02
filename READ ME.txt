@@ -1,0 +1,9 @@
+Before using this project edit 'php/doconfig.php' for database connection.
+
+then use below sql statements to create Database and Table.
+
+
+CREATE DATABASE `test`;
+CREATE TABLE `test`.`users` ( `id` INT AUTO_INCREMENT, `firstname` TEXT , `lastname` TEXT , `email` TEXT , `phone` VARCHAR(11) , `dob` DATE , `age` INT , `gender` TEXT , `password` TEXT , PRIMARY KEY (`id`),UNIQUE(`email`)); 
+
+The JSON file is under the folder 'php'.

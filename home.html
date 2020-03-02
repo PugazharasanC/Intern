@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+        <title>Guvi</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+		<script src = "js/validate.js"></script>
+		<script src = "js/feeder.js"></script>
+	</head>
+	<body>
+		<div class = "container">
+			<div class = "row">
+				<div class = "col"></div>
+				<div id = "div_login" class = "col">
+					<div id = "input_login">
+						<h1 class = "text-primary" id = "div_text">Profile</h1>
+						<div class = "form-group">
+							<label for="txt_fname">First Name:</label>
+							<div class = "input-group">
+								<div class = "input-group-prepend">
+									<span class = "input-group-text"><i class = "fas fa-user"></i></span>
+								</div>
+								<input type="name" class="form-control" id="txt_fname" name="txt_fname" placeholder="Firstname" disabled required />
+		
+								<div class = "input-group-append">
+									<span class = "input-group-text" id = "fname_edit"><i id = "icon_fname" class="fas fa-edit"></i></span>
+								</div>
+							</div> 
+						</div>
+						<div class = "form-group">
+							<label for="txt_lname">Last Name:</label>
+							<div class = "input-group">
+								<div class = "input-group-prepend">
+									<span class = "input-group-text"><i class = "fas fa-user"></i></span>
+								</div>
+								<input type="name" class="form-control" id="txt_lname" name="txt_lname" placeholder="Lastname" disabled required />
+		
+								<div class = "input-group-append">
+									<span class = "input-group-text" id = "lname_edit"><i id = "icon_lname" class="fas fa-edit"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class = "form-group">
+							<label for="txt_phone">Phone Number:</label>
+							<div class = "input-group">
+								<div class = "input-group-prepend">
+									<span class = "input-group-text"><i id = "icon_fname" class="fa fa-mobile"></i></span>
+								</div>
+								<input type="tel" class="form-control" id="txt_phone" name="txt_phone" placeholder="Phone Number" disabled required />
+		
+								<div class = "input-group-append">
+									<span class = "input-group-text" id = "phone_edit"><i id = "icon_phone" class="fas fa-edit"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class = "form-group">
+							<label for="txt_dob">DOB:</label>
+							<div class = "input-group">
+								<div class = "input-group-prepend">
+									<span class = "input-group-text"><i class = "fas fa-calendar-alt"></i></span>
+								</div>
+								<input type="date" class="form-control" id="txt_dob" name="txt_dob" placeholder="DOB" disabled required />
+		
+								<div class = "input-group-append">
+									<span class = "input-group-text" id = "dob_edit"><i id = "icon_dob" class="fas fa-edit"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class = "form-group">
+							<label for="txt_pwd">Password:</label>
+							<div class = "input-group">
+								<div class = "input-group-prepend">
+									<span class = "input-group-text"><i class = "fas fa-key"></i></span>
+								</div>
+								<input type="password" class="form-control" id="txt_pwd" name="txt_pwd" placeholder="Password" disabled required />
+		
+								<div class = "input-group-append">
+									<span class = "input-group-text" id = "pwd_edit"><i id = "icon_pwd" class="fas fa-edit"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class = "form-group" align = "center">
+							<button type = "button" class = "btn btn-danger" id = "logoutbtn" name = "logoutbtn" value = "Log Out">Log Out <i class ="fa fa-sign-out-alt"></i></button>
+						</div>
+						<input type = "hidden" id = "txt_uname"></input>
+						<input type = "hidden" id = "txt_id"></input>
+						<input type = "hidden" id = "txt_age"></input>
+					</div>
+				</div>
+				<div class = "col"></div>
+			</div>
+		</div>
+	</body>
+</html>
