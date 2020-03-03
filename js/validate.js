@@ -299,3 +299,4 @@ jQuery(document).ready(function(){
 					return regexPattern.test(input);
 				}
             });
+			

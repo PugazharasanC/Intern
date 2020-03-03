@@ -19,7 +19,10 @@
     }else{
 		$jsonFile = "data.json";
 		$arr_data = array();
-		
+		if(file_exists($jsonFile)==false){
+			$contents = '';
+			file_put_contents($jsonFile, $contents);
+		}
 		try{
 			$userData = array(
 				'firstname' => $firstname,
@@ -42,20 +45,21 @@
 			}
 			$jsondata = json_encode($arr_data , JSON_PRETTY_PRINT);
 			file_put_contents($jsonFile, $jsondata);
+			$sql_query = "INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `phone`, `dob`, `age`, `gender`, `password`) VALUES (NULL, ?, ?,?, ?, ?, ?, ?, ?);";
+			if($stmt = mysqli_prepare($con,$sql_query))
+			{
+				mysqli_stmt_bind_param($stmt, 'sssssiss',$firstname,$lastname,$mail,$phone,$dob,$age,$gender,$password);
+				mysqli_stmt_execute($stmt);
+				echo 1;
+			}
+			else
+			{
+				echo 0;
+			}
+			
 		}
 		catch(Exception $e){
 			echo $e->getMessage();
-		}
-		$sql_query = "INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `phone`, `dob`, `age`, `gender`, `password`) VALUES (NULL, ?, ?,?, ?, ?, ?, ?, ?);";
-		if($stmt = mysqli_prepare($con,$sql_query))
-		{
-			mysqli_stmt_bind_param($stmt, 'sssssiss',$firstname,$lastname,$mail,$phone,$dob,$age,$gender,$password);
-			mysqli_stmt_execute($stmt);
-			echo 1;
-		}
-		else
-		{
-			echo 0;
 		}
 	}
 ?>
